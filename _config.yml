@@ -296,9 +296,9 @@ defaults:
 
   #_pages
 
-  -scope:
-    path:""
-    type: Pages
+  - scope:
+     path: ""
+     type: Pages
    values:
     layout: single
     author_profile: true
