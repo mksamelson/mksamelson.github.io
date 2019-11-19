@@ -132,6 +132,9 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      # url: "https://linkedin.com/"
 
 # Site Footer
 footer:
@@ -295,10 +298,9 @@ defaults:
       related: true
 
   #_pages
-
   - scope:
       path: ""
       type: pages
     values:
       layout: single
-      author_profile: structured
+      author_profile: true
