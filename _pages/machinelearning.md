@@ -1,6 +1,6 @@
 machinelearning.md
 layout: archive
-permalink: /machine-learning/
+permalink: /machinelearning/
 title: "Machine Learning Posts by Tag"
 author_profile: true
 header:
