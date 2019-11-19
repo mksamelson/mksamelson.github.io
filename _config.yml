@@ -108,7 +108,7 @@ analytics:
 # Site Author
 author:
   name             : "Matt Samelson"
-  avatar           : "/images/datascience-og.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/bio_image.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Data Science Portfolio"
   location         : "Stamford, CT"
   email            :
