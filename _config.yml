@@ -301,4 +301,4 @@ defaults:
       type: Pages
     values:
       layout: single
-      author_profile: structured
+      author_profile: true
