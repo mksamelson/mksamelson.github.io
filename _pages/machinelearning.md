@@ -2,13 +2,13 @@ machinelearning.md
 layout: archive
 permalink: /machine-learning/
 title: "Machine Learning Posts by Tag"
-author_profile: true
+author_profile: structured
 header:
     #image: "/images/image.jpeg"
 
 ---
 
-{% include base_path %}
+# {% include base_path %}
 {% include group-by-array collection=site.posts field="tags" %}
 
 {% for tag in group_names %}
