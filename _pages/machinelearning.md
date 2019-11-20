@@ -17,3 +17,7 @@ header:
     {% include archive-single.html %}
   {% endfor %}
 {% endfor %}
+
+{% for post in site.posts %}
+    {% include archive-single.html %}
+{% endfor %}
