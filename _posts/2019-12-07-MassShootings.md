@@ -1,6 +1,6 @@
 ---
 title:  "Mass Shootings - the Mother Jones Data"
-date: 2019-12-077
+date: 2019-12-07
 tags: [Data Science]
 excerpt:  #"Mass Shootings - the Mother Jones Data"
 ---
