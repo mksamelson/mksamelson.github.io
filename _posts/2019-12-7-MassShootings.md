@@ -2,7 +2,7 @@
 title:  "Mass Shootings - the Mother Jones Data"
 date: 2019-12-077
 tags: [Data Science]
-excerpt:  #
+excerpt:  #"Mass Shootings - the Mother Jones Data"
 ---
 
 ## Mass Shootings Are High Profile But Should Not Be Central To The Gun Debate
