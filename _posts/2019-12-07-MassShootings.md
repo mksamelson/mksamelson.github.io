@@ -21,7 +21,7 @@ This analysis focuses on understand and attempting to elicit statistical signifi
 
 The geography of US mass shootings between 1982 and 2015 is illustrated in the map below.
 
-<script src="https://mksamelson.cartodb.com/viz/f246477c-a4cc-11e5-a726-0e3a376473ab/public_map"></script>
+<script src="https://mksamelson.carto.com/viz/f246477c-a4cc-11e5-a726-0e3a376473ab/embed_map"></script>
 
 The map highlights the 73 events contained comprising the Mother Jones data.  The size of the event pertains to number of total victims.
 
