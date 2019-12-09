@@ -17,6 +17,13 @@ Mother Jones Magazine was challenged by activists in response to assertions made
 
 This analysis focuses on understand and attempting to elicit statistical significance from the Mother Jones data.
 
+<iframe id="inlineFrameExample"
+    title="Inline Frame Example"
+    width="300"
+    height="200"
+    src="https://mksamelson.cartodb.com/viz/f246477c-a4cc-11e5-a726-0e3a376473ab/public_map">
+</iframe>
+
 ## Mass Shooting Events
 
 The geography of US mass shootings between 1982 and 2015 is illustrated in the map below.
