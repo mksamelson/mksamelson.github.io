@@ -21,7 +21,7 @@ This analysis focuses on understand and attempting to elicit statistical signifi
     title="Inline Frame Example"
     width="300"
     height="300"
-    src="https://mksamelson.cartodb.com/viz/f246477c-a4cc-11e5-a726-0e3a376473ab/public_map"
+    src="https://mksamelson.carto.com/viz/f246477c-a4cc-11e5-a726-0e3a376473ab/embed_map"
     frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
 </iframe>
 
