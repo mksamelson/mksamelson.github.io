@@ -82,12 +82,17 @@ There was no missing data in the initial data set.
 I elected to use a boosted tree classifier since required data preprocessing and not perform feature selection given my initial objective was to get the best performing model.  I did not remove correlated features as these models handle them in training.  While feature standardization is known not to impact performance significantly, I still
 elected to perform it.
 
-Most features exhibit an exponential distribution.  I show on histogram as an example.
+Most features exhibit an exponential distribution.  Historgrams for one data element for each of the three months for reloads_count are shown below:
+
+<img src="{{site.url}}{{ site.baseurl }}/images/reloads_count_june.png" alt="this is a placeholder image">  
+
+<img src="{{site.url}}{{ site.baseurl }}/images/reloads_count_july.png" alt="this is a placeholder image">  
+
+<img src="{{site.url}}{{ site.baseurl }}/images/reloads_count_august.png" alt="this is a placeholder image">  
 
 ## Outliers
 
-I examined feature distributions individually to identify outliers and find
-erroneous data.  Only one feature, user_spendings, had any suspicious data a deminimis 27 negative values.  For good form, I eliminated these values as erroneous, substituting an NA for the negative values.
+I examined feature distributions individually to identify outliers and find erroneous data.  Only one feature, user_spendings, had any suspicious data a deminimis 27 negative values.  For good form, I eliminated these values as erroneous, substituting an NA for the negative values.
 
 The figures below demonstrate the process through which I generated histograms, reviewed, and modified the data.
 
