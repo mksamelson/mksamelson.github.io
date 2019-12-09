@@ -20,7 +20,7 @@ This analysis focuses on understand and attempting to elicit statistical signifi
 <iframe id="inlineFrameExample"
     title="Inline Frame Example"
     height = "600"
-    width = "600"
+    width = "1000"
     src="https://mksamelson.carto.com/viz/f246477c-a4cc-11e5-a726-0e3a376473ab/embed_map">
 </iframe>
 
