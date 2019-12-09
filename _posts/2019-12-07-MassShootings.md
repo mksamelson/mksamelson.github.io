@@ -19,8 +19,8 @@ This analysis focuses on understand and attempting to elicit statistical signifi
 
 <iframe id="inlineFrameExample"
     title="Inline Frame Example"
-    width="300"
-    height="300"
+    width="800"
+    height="800"
     src="https://mksamelson.carto.com/viz/f246477c-a4cc-11e5-a726-0e3a376473ab/embed_map"
     frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
 </iframe>
