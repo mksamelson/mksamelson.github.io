@@ -128,7 +128,7 @@ The maximum accuracy the model achieves is approximately 89% at a threshold of .
 
 The confusion matrix at this point shows the following.
 
-<img src="{{site.url}}{{ site.baseurl }}/images/cm294.jpeg" alt="Accuracy Plot">
+<img src="{{site.url}}{{ site.baseurl }}/images/cmmaxaccuracy.jpeg" alt="Accuracy Plot">
 
 
 Accuracy is often not the best metric in classification.  In the case of an imbalanced data set such as this one in which negative observations (Customers that kept the service in the 4th month) far outnumber positive observations (customers that drop the service in the 4th month), the model with the objective of maximizing accuracy will attempt to minimize *overall* classification error.  
