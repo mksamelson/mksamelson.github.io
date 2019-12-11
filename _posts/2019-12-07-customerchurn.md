@@ -108,21 +108,37 @@ I chose a boosted tree model to predict churn due to it's powerful predictive ca
 and its ability to easily and powerfully assess feature importance.
 
 The xgbtree method in the R's Caret package makes use of XgBoost - a variation
-of a boosted tree ensemble. I used Caret instead of the XgBoost package because of conveniences in data pre-processing, cross validation, and grid search not present in
-the XgBoost package itself.
+of a boosted tree ensemble. I used Caret instead of the XgBoost package because of conveniences in data pre-processing, cross validation, and grid search not present in the XgBoost package itself.
 
 <script src="https://gist.github.com/mksamelson/9073eac9e4ab9f0320d3cb8b44c68876.js"></script>
 
-The best model had an AUC of approximately 0.92 and an error of 0.11 using accuracy.
-
-Accuracy is often not the best metric in classification.  In the case
-of an imbalanced data set such as this one in which negative observations (Customers that kept the service in the 4th month) far outnumber positive observations (customers that drop the service in the 4th month), the model with the objective of maximizing accuracy will attempt to minimize *overall* classification error.  
-
-Our objective is slightly different.  We want to maximize true positives. We do this by adjusting the classification threshold value.  This is done by balancing senitivity and specificity.  We do this by selecting the threshold value at the point on ROC Curve where the trade off between obtaining an additional true positive equals that of obtaining an additional false positive.  In our case, that threshold value is 0.04.  This, of course, results in a slightly lower overall accuracy.
+The best model had an AUC of approximately 0.92.
 
 <img src="{{site.url}}{{ site.baseurl }}/images/ROC_curve.jpeg" alt="ROC curve">
 
+However, AUC alone does not help address our optimal solution for the business problem at hand.
+
+We need to maximize true positives (customers that quit the service) for the company to take any advance preventative action.  The ROC curve summarizes the universe of confusion matrices associated with this model.  A confusion matrix summarizes model performance at a given *theshold* (point on the ROC curve) in terms of true and false positives and negatives.  
+
+Maximizing *overall* model accuracy is unfortunately not the answer.  A threshold value that provides overall classification accuracy will attempt to maximize *combined* true positives and true negatives.  The data is highly skewed in that the number of customers that drop the service is small in comparison to those that don't.  In attempting to maximize accuracy the model tends to correctly classify negatives in which we are not interested.    
+
+The maximum accuracy the model achieves is approximately 89% at a threshold of .294.
+
+<img src="{{site.url}}{{ site.baseurl }}/images/AccuracyPlot.jpeg" alt="Accuracy Plot">
+
+The confusion matrix at this point shows the following.
+
+<img src="{{site.url}}{{ site.baseurl }}/images/cm294.jpeg" alt="Accuracy Plot">
+
+
+Accuracy is often not the best metric in classification.  In the case of an imbalanced data set such as this one in which negative observations (Customers that kept the service in the 4th month) far outnumber positive observations (customers that drop the service in the 4th month), the model with the objective of maximizing accuracy will attempt to minimize *overall* classification error.  
+
+Our objective is slightly different.  We want to maximize true positives. We do this by adjusting the classification threshold value.  This is done by balancing sensitivity and specificity.  We do this by selecting the threshold value at the point on ROC Curve where the trade off between obtaining an additional true positive equals that of obtaining an additional false positive.  In our case, that threshold value is 0.04.  This, of course, results in a slightly lower overall accuracy.
+
 <img src="{{site.url}}{{ site.baseurl }}/images/cm_optimal.jpeg" alt="">
+
+
+
 
 Training the model is time and resource intensive. The model was trained in an AWS instance with 8G RAM and 30G memory. Run time in that environment was approximately one hour.
 
