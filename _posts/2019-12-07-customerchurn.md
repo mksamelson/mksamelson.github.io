@@ -84,11 +84,11 @@ elected to perform it.
 
 Most features exhibit an exponential distribution.  Historgrams for one data element for each of the three months for reloads_count are shown below:
 
-<img src="{{site.url}}{{ site.baseurl }}/images/reloads_count_june.png" alt="this is a placeholder image">  
+<img src="{{site.url}}{{ site.baseurl }}/images/churn/reloads_count_june.png" alt="this is a placeholder image">  
 
-<img src="{{site.url}}{{ site.baseurl }}/images/reloads_count_july.png" alt="this is a placeholder image">  
+<img src="{{site.url}}{{ site.baseurl }}/images/churn/reloads_count_july.png" alt="this is a placeholder image">  
 
-<img src="{{site.url}}{{ site.baseurl }}/images/reloads_count_august.png" alt="this is a placeholder image">  
+<img src="{{site.url}}{{ site.baseurl }}/images/churn/reloads_count_august.png" alt="this is a placeholder image">  
 
 ## Outliers
 
@@ -114,28 +114,34 @@ of a boosted tree ensemble. I used Caret instead of the XgBoost package because 
 
 The best model had an AUC of approximately 0.92.
 
-<img src="{{site.url}}{{ site.baseurl }}/images/ROC_curve.jpeg" alt="ROC curve">
+<img src="{{site.url}}{{ site.baseurl }}/images/churn/ROC_curve.jpeg" alt="ROC curve">
 
-However, AUC alone does not help address our optimal solution for the business problem at hand.
+However, AUC alone does not help address our optimal solution for the business problem at hand.  The ROC curve summarizes the universe of confusion matrices associated with this model.  A confusion matrix summarizes model performance at a given *theshold* (point on the ROC curve) in terms of true and false positives and negatives.  
 
-We need to maximize true positives (customers that quit the service) for the company to take any advance preventative action.  The ROC curve summarizes the universe of confusion matrices associated with this model.  A confusion matrix summarizes model performance at a given *theshold* (point on the ROC curve) in terms of true and false positives and negatives.  
+We need to find the confusion matrix associated with a point the ROC curve that gives us a "good balance" of true positives and false positives.  
+
 
 Maximizing *overall* model accuracy is unfortunately not the answer.  A threshold value that provides overall classification accuracy will attempt to maximize *combined* true positives and true negatives.  The data is highly skewed in that the number of customers that drop the service is small in comparison to those that don't.  In attempting to maximize accuracy the model tends to correctly classify negatives in which we are not interested.    
 
 The maximum accuracy the model achieves is approximately 89% at a threshold of .294.
 
-<img src="{{site.url}}{{ site.baseurl }}/images/AccuracyPlot.jpeg" alt="Accuracy Plot">
+<img src="{{site.url}}{{ site.baseurl }}/images/churn/AccuracyPlot.jpeg" alt="Accuracy Plot">
 
 The confusion matrix at this point shows the following.
 
-<img src="{{site.url}}{{ site.baseurl }}/images/cmmaxaccuracy.jpeg" alt="Accuracy Plot">
+<img src="{{site.url}}{{ site.baseurl }}/images/churn/cmmaxaccuracy.jpeg" alt="Accuracy Plot">
+
+Accuracy is often not the best metric for classification.  This is because the model will attempt to maximize *overall* accuracy.
+
+We are not interested in overall accuracy (maximizing true positives + true negatives).  The business objective is to identify customers predicted to drop the service (true positives).  We want to maximize true positives *subject to* an "acceptable" number of false positives and false negatives.  In other words, we're ok with a model that has some predictive error if it gets us incrementally more true positives than we get using overall accuracy so long as the error (false positives and false negatives) are not "overwhelming".  This is a subjective decision supported by analytics.
+
+So how do we find the "best" model?  We have already turned the model's hyperparameters.  This gives us the best "universe" of solutions.  We must determine the appropriate "cutoff" - or decision threshold - that gives us the optimal mix of true positives, false positives, and false negatives.  Again, in other words, the "optimal" precision and recall for our purposes.
+
+We find the optimal threshold / point on the ROC curve in this case by balancing sensitivity and specificity.  Stated a bit differently, we want to find the point on the curve where rate-of-change in the sensitivity (true positive rate) equals the rate-of-change in 1 - specificity (false positive rate).  This gives us a "balance" between true positives and false positives.  This point occurs where the threshold value = 0.04.
+
+<img src="{{site.url}}{{ site.baseurl }}/images/churn/cm_optimal.jpeg" alt="">
 
 
-Accuracy is often not the best metric in classification.  In the case of an imbalanced data set such as this one in which negative observations (Customers that kept the service in the 4th month) far outnumber positive observations (customers that drop the service in the 4th month), the model with the objective of maximizing accuracy will attempt to minimize *overall* classification error.  
-
-Our objective is slightly different.  We want to maximize true positives. We do this by adjusting the classification threshold value.  This is done by balancing sensitivity and specificity.  We do this by selecting the threshold value at the point on ROC Curve where the trade off between obtaining an additional true positive equals that of obtaining an additional false positive.  In our case, that threshold value is 0.04.  This, of course, results in a slightly lower overall accuracy.
-
-<img src="{{site.url}}{{ site.baseurl }}/images/cm_optimal.jpeg" alt="">
 
 
 
