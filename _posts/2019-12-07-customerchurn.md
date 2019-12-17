@@ -5,33 +5,6 @@ tags: [Classification, Machine Learning, Data Science]
 excerpt:  #"Predicting Customer Churn"
 ---
 
-```r
-
-library(ggplot2)
-library(reshape2)
-library(data.table)
-library(caret)
-library(e1071)
-library(xgboost)
-library(Matrix)
-library(DiagrammeR)
-library(ROCR)
-library(ggplot2)
-
-setwd('C:/Users/mksam/Dropbox/DataScienceBootcamp/Projects/customer churn/data')
-
-client.info = read.csv("clientinfo.csv")
-churn.info = read.csv("accountinfo.csv")
-
-```
-ewew
-
-```r
-str(client.info)
-sum(is.na(client.info))
-dim(client.info)
-```
-
 Customer retention is critical for all businesses.  Customers are the primary source of company revenue and
 have a direct impact on the bottom line. Understanding engagement - and better yet being able to predict
 engagement - can be particularly helpful to intercede in issues **before** they become problems.
