@@ -5,6 +5,33 @@ tags: [Classification, Machine Learning, Data Science]
 excerpt:  #"Predicting Customer Churn"
 ---
 
+```{r include=FALSE}
+
+library(ggplot2)
+library(reshape2)
+library(data.table)
+library(caret)
+library(e1071)
+library(xgboost)
+library(Matrix)
+library(DiagrammeR)
+library(ROCR)
+library(ggplot2)
+
+setwd('C:/Users/mksam/Dropbox/DataScienceBootcamp/Projects/customer churn/data')
+
+client.info = read.csv("clientinfo.csv")
+churn.info = read.csv("accountinfo.csv")
+
+```
+ewew
+
+```{r}
+str(client.info)
+sum(is.na(client.info))
+dim(client.info)
+```
+
 Customer retention is critical for all businesses.  Customers are the primary source of company revenue and
 have a direct impact on the bottom line. Understanding engagement - and better yet being able to predict
 engagement - can be particularly helpful to intercede in issues **before** they become problems.
@@ -21,7 +48,9 @@ The data is contained in a single file with multiple sheets.  One sheet contains
 
 ### Load Data and Munge data
 
-Loading and munging is fairly straightforward.
+#### Independent variables]
+
+Loading and munging is fairly straightforward.  Fortunately, this data set is very clean.
 
 In short we do the following:
 
@@ -72,6 +101,10 @@ July as August will have the most accurate value
 After revisions, we see the shape of more reflective dataset as 182 features and 57,656 observations.  165 of the features are continuous with the balance binary
 categorical.  The number of observations reflects customers who had service for all 3 months, the balance were eliminated during the merge process shown above.
 
+#### Dependent Variable (Target)
+
+
+
 ## Exploratory Data Analysis (EDA)
 
 EDA is essential to understand the data set.  However, presentation of summary statistics, distributions, correlations, and other interpretations of data of approximately 180 features does not conveniently lend itself to presentation in the context of a web page.  
@@ -90,7 +123,7 @@ Most features exhibit an exponential distribution.  Historgrams for one data ele
 
 <img src="{{site.url}}{{ site.baseurl }}/images/churn/reloads_count_august.png" alt="this is a placeholder image">  
 
-## Outliers
+## Erroneous Data
 
 I examined feature distributions individually to identify outliers and find erroneous data.  A few features, such has user_spendings, had deminimis  negative values.  For good form, I eliminated these values as erroneous, substituting 0 for the negative values.
 
@@ -139,7 +172,7 @@ We find the optimal threshold / point on the ROC curve in this case by balancing
 
 <img src="{{site.url}}{{ site.baseurl }}/images/churn/cm_optimal.jpeg" alt="">
 
-## Other Consideration
+## Other Considerations
 
 I mention at the outset that I did not center, scale, or transform the data.  This is because boosted tree models are not particularly sensitive to these transformations and performance was very strong without them.  Furthermore, omitting these steps enabled me to focus more succinctly on explaining the derivation of the optimal model using an accuracy metric.
 
