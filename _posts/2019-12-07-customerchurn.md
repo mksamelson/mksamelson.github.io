@@ -5,7 +5,7 @@ tags: [Classification, Machine Learning, Data Science]
 excerpt:  #"Predicting Customer Churn"
 ---
 
-```{r include=FALSE}
+```r include=FALSE
 
 library(ggplot2)
 library(reshape2)
@@ -26,7 +26,7 @@ churn.info = read.csv("accountinfo.csv")
 ```
 ewew
 
-```{r}
+```r
 str(client.info)
 sum(is.na(client.info))
 dim(client.info)
