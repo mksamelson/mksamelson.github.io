@@ -5,7 +5,7 @@ tags: [Classification, Machine Learning, Data Science]
 excerpt:  #"Predicting Customer Churn"
 ---
 
-```r
+```{r include = false}
 
 library(ggplot2)
 library(reshape2)
