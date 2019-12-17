@@ -46,9 +46,7 @@ All work is done in R.
 
 The data is contained in a single file with multiple sheets.  One sheet contains features. These include but are not limited to customer spending, calls, SMS use, and data use. A second sheet contains a binary churn indicator indicating whether a particular customer dropped or maintained service in September 2013. A third page has variable definitions in plain English.
 
-### Load Data and Munge data
-
-#### Independent variables]
+### Independent variables
 
 Loading and munging is fairly straightforward.  Fortunately, this data set is very clean.
 
@@ -101,9 +99,15 @@ July as August will have the most accurate value
 After revisions, we see the shape of more reflective dataset as 182 features and 57,656 observations.  165 of the features are continuous with the balance binary
 categorical.  The number of observations reflects customers who had service for all 3 months, the balance were eliminated during the merge process shown above.
 
-#### Dependent Variable (Target)
+### Dependent Variable (Target)
 
+The dependent variable is a binary classifier.  It has a value of 0 (service maintained) or 1 (service dropped).
 
+The proportion of customers that dropped service vs. those who kept service is as follows:
+
+<script src="https://gist.github.com/mksamelson/d523bd36f015484dacaec0c528ff236a.js"></script>
+
+The results indicate about 20% of customers drop in the fourth month.  Accordingly we can consider this data set skewed.
 
 ## Exploratory Data Analysis (EDA)
 
