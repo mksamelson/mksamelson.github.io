@@ -104,14 +104,6 @@ Most features exhibit an exponential distribution.  Historgrams for one data ele
 
 I examined feature distributions individually to identify outliers and find erroneous data.  A few features, such has user_spendings, had deminimis  negative values.  For good form, I eliminated these values as erroneous, substituting 0 for the negative values.
 
-The figures below demonstrate the process through which I generated histograms, reviewed, and modified the data.
-
-<img src="{{site.url}}{{ site.baseurl }}/images/churn/user_spendings_pre.jpeg" alt="this is a placeholder image">  
-
-<script src="https://gist.github.com/mksamelson/ccca5078c2a4f455bfda1ad9e721f681.js"></script>
-
-<img src="{{site.url}}{{ site.baseurl }}/images/churn/user_spendings_post.jpeg" alt="this is a placeholder image">  
-
 ## Model
 
 I chose a boosted tree model to predict churn due to it's powerful predictive capability, it's ability to work well with non-normally distributed inputs,
@@ -119,7 +111,15 @@ and its ability to easily and powerfully assess feature importance.
 
 The xgbtree method in the R's Caret package makes use of XgBoost - a variation of a boosted tree ensemble. I used Caret instead of the XgBoost package because of conveniences in data pre-processing, cross validation, and grid search not present in the XgBoost package itself.
 
+I created training and validation sets maintaining class split proportions identfied above.
+
 <script src="https://gist.github.com/mksamelson/9073eac9e4ab9f0320d3cb8b44c68876.js"></script>
+
+I then trained the model.  By default, the latest version of R's Caret package performs a grid search using a range of hyperparameter values and picks the settings.  As indicated above, for simplicity of explanation I use the accuracy metric and attempt to maximize it.  
+
+Using the training data I employ 5 fold cross validation to test performance.
+
+<script src="https://gist.github.com/mksamelson/31042cc7818595589753baa6e9f30640.js"></script>
 
 The best model had an AUC of approximately 0.92 for the training data and 0.91 against validation data.
 
