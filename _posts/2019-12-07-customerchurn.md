@@ -160,7 +160,7 @@ So how is the "best" model determined?  The ROC curve provides the best "univers
 
 We find the optimal threshold / point on the ROC curve in this case by balancing sensitivity and specificity.  Stated a bit differently, we want to find the point on the curve where rate-of-change in the sensitivity (true positive rate) equals the rate-of-change in 1 - specificity (false positive rate).  This gives us a "balance" between true positives and false positives.  This point occurs where the threshold value = 0.1204.
 
-<img src="{{site.url}}{{ site.baseurl }}/images/churn/ROC_Optimal.jpeg" alt="ROC curve">
+<img src="{{site.url}}{{ site.baseurl }}/images/churn/ROC-Optimal.jpeg" alt="ROC curve">
 
 
 The maximum accuracy the model achieves is approximately 91% at a threshold of .481.
