@@ -144,19 +144,24 @@ This may look great but it's not exactly what we want. Maximizing model accuracy
 
 Maximum accuracy will produce a model that attempts to maximize *combined* accuracy for true positives and true negatives.  
 
-We are more interested in *maximizing true positives and accepting a larger number of false positives*.  Why?  To take corrective action, the business must reach out to customers *before* they drop the service.  Accordingly, the objective is to identify the most properly identified customers (true postives) recogizing that to boost this number we will also falsely identify some customers as intending to drop that won't (false positives).  And that's ok.  Reaching out to the "wrong" customers can also have favorable benefits.  But we don't want the imbalance between true positives and false positives to be extreme.  This requires a judgment call.
+We are more interested in *maximizing true positives and accepting a larger number of false positives*.  Why?  To take corrective action, the business must reach out to customers *before* they drop the service.  Accordingly, the objective is to identify the most properly identified customers (true positives) recognizing that to boost this number we will also falsely identify some customers as intending to drop that won't (false positives).  And that's ok.  Reaching out to the "wrong" customers can also have favorable benefits.  But we don't want the imbalance between true positives and false positives to be extreme.  This requires a judgment call.
 
 So how do we find the "right" combination of true positives and false positives?
 
+The ROC Curve represents the universe of confusion matrices.  Each point on the curve represents the trade off between true positives and false positives for a specific threshold.  The threshold, or "cutoff", sets the probability above which a model classifies as positive and below which the model classifies as negative.  Normally, with a balance data set (approximately equal positives and negatives) the threshold is set to 0.5.  
 
+The area under the ROC Curve (AUC) is also a model performance metric.  As an aside it is worth noting the AUC of our final model is approximately 0.92.  It's a good model.
 
-
-The In attempting to maximize accuracy the model tends to correctly classify negatives in which we are not interested.    
-
-
-The best model had an AUC of approximately 0.92 for the training data and 0.91 against validation data.
+The ROC Curve is show below:
 
 <img src="{{site.url}}{{ site.baseurl }}/images/churn/ROC_curve.jpeg" alt="ROC curve">
+
+So how is the "best" model determined?  The ROC curve provides the best "universe" of solutions.  We must determine the appropriate "cutoff" - or decision threshold - that gives us the optimal mix of true positives, false positives, and false negatives.  Again, in other words, the "optimal" precision and recall for our purposes.
+
+We find the optimal threshold / point on the ROC curve in this case by balancing sensitivity and specificity.  Stated a bit differently, we want to find the point on the curve where rate-of-change in the sensitivity (true positive rate) equals the rate-of-change in 1 - specificity (false positive rate).  This gives us a "balance" between true positives and false positives.  This point occurs where the threshold value = 0.1204.
+
+
+
 
 However, AUC alone does not help address our optimal solution for the business problem at hand.  The ROC curve summarizes the universe of confusion matrices associated with this model.  A confusion matrix summarizes model performance at a given *theshold* (point on the ROC curve) in terms of true and false positives and negatives.  
 
@@ -171,13 +176,10 @@ The confusion matrix at this point shows the following.
 
 <img src="{{site.url}}{{ site.baseurl }}/images/churn/cmmaxaccuracy.jpeg" alt="Accuracy Plot">
 
-Accuracy is often not the best metric for classification.  This is because the model will attempt to maximize *overall* accuracy.
 
-I am not interested in overall accuracy (maximizing true positives + true negatives).  The business objective is to identify customers predicted to drop the service (true positives).  We want to maximize true positives *subject to* an "acceptable" number of false positives and false negatives.  In other words, we're ok with a model that has some predictive error if it gets us incrementally more true positives than we get using overall accuracy so long as the error (false positives and false negatives) are not "overwhelming".  This is a subjective decision supported by analytics.
 
-So how do I find the "best" model?  We have already turned the model's hyperparameters.  This gives us the best "universe" of solutions.  We must determine the appropriate "cutoff" - or decision threshold - that gives us the optimal mix of true positives, false positives, and false negatives.  Again, in other words, the "optimal" precision and recall for our purposes.
 
-We find the optimal threshold / point on the ROC curve in this case by balancing sensitivity and specificity.  Stated a bit differently, we want to find the point on the curve where rate-of-change in the sensitivity (true positive rate) equals the rate-of-change in 1 - specificity (false positive rate).  This gives us a "balance" between true positives and false positives.  This point occurs where the threshold value = 0.04.
+
 
 <img src="{{site.url}}{{ site.baseurl }}/images/churn/cm_optimal.jpeg" alt="">
 
