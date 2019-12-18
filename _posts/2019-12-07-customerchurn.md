@@ -121,6 +121,27 @@ Using the training data I employ 5 fold cross validation to test performance.
 
 <script src="https://gist.github.com/mksamelson/31042cc7818595589753baa6e9f30640.js"></script>
 
+The best model had an accuracy of 0.9078 and the following hyperparameters:
+
+* min_child_weight = 1
+* nrounds = 150
+* max_depth = 1
+* eta = 0.3
+* gamma = 0
+* colsample_bytree = 0.8
+* min_child_weight = 1
+* subsample = 0.75
+
+Meaningful performance is determined by making predictions on the unseen validation set and assessing performance.  
+
+Accuracy on the validation set 0.9065 - surprisingly nearly the same as on the training data.
+
+The confusion matrix displaying the distribution of true positive, true negative, false positive, and false negative predicted values on the validation set is as follows:
+
+<img src="{{site.url}}{{ site.baseurl }}/images/churn/cm_validation_acc.jpeg" alt="this is a placeholder image">  
+
+
+
 The best model had an AUC of approximately 0.92 for the training data and 0.91 against validation data.
 
 <img src="{{site.url}}{{ site.baseurl }}/images/churn/ROC_curve.jpeg" alt="ROC curve">
