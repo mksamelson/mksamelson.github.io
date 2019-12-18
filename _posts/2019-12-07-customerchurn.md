@@ -148,7 +148,7 @@ We are more interested in *maximizing true positives and accepting a larger numb
 
 So how do we find the "right" combination of true positives and false positives?
 
-The ROC Curve represents the universe of confusion matrices.  Each point on the curve represents the trade off between true positives and false positives for a specific threshold.  The threshold, or "cutoff", sets the probability above which a model classifies as positive and below which the model classifies as negative.  Normally, with a balance data set (approximately equal positives and negatives) the threshold is set to 0.5.  
+The ROC Curve represents the universe of confusion matrices.  Each point on the curve represents the trade off between true positives and false positives for a specific threshold.  The threshold, or "cutoff", sets the probability above which a model classifies as positive and below which the model classifies as negative.  Normally, with a balance data set (approximately equal positives and negatives) the threshold is set to 0.4817.  
 
 The area under the ROC Curve (AUC) is also a model performance metric.  As an aside it is worth noting the AUC of our final model is approximately 0.92.  It's a good model.
 
@@ -160,15 +160,11 @@ So how is the "best" model determined?  The ROC curve provides the best "univers
 
 We find the optimal threshold / point on the ROC curve in this case by balancing sensitivity and specificity.  Stated a bit differently, we want to find the point on the curve where rate-of-change in the sensitivity (true positive rate) equals the rate-of-change in 1 - specificity (false positive rate).  This gives us a "balance" between true positives and false positives.  This point occurs where the threshold value = 0.1204.
 
-
-
-
-However, AUC alone does not help address our optimal solution for the business problem at hand.  The ROC curve summarizes the universe of confusion matrices associated with this model.  A confusion matrix summarizes model performance at a given *theshold* (point on the ROC curve) in terms of true and false positives and negatives.  
-
-I need to find the confusion matrix associated with a point the ROC curve that gives us a "good balance" of true positives and false positives.  
+<img src="{{site.url}}{{ site.baseurl }}/images/churn/ROC_optimal.jpeg" alt="ROC curve">
 
 
 The maximum accuracy the model achieves is approximately 91% at a threshold of .481.
+
 
 <img src="{{site.url}}{{ site.baseurl }}/images/churn/AccuracyPlot.jpeg" alt="Accuracy Plot">
 
