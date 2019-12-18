@@ -162,20 +162,17 @@ We find the optimal threshold / point on the ROC curve in this case by balancing
 
 <img src="{{site.url}}{{ site.baseurl }}/images/churn/ROC-Optimal.jpeg" alt="ROC curve">
 
+Interpreting the above figure, it is preferable to move up the curve from the confusion matrix at the maximum accuracy threshold to the confusion matrix at the optimal accuracy threshold.  In doing so we move up and to the right.  This gives us additional true positive and false positives.  Again, this is ok because, in taking corrective action, the business will want to capture the maximum true positives while incurring "some" false positives.  The optimal point is where the incremental added true positive equals the incremental added false positive.
 
-The maximum accuracy the model achieves is approximately 91% at a threshold of .481.
+The confusion matrices are below.
 
+Maximum Accuracy
 
 <img src="{{site.url}}{{ site.baseurl }}/images/churn/AccuracyPlot.jpeg" alt="Accuracy Plot">
 
-The confusion matrix at this point shows the following.
+Optimal Accuracy
 
 <img src="{{site.url}}{{ site.baseurl }}/images/churn/cmmaxaccuracy.jpeg" alt="Accuracy Plot">
-
-
-
-
-
 
 <img src="{{site.url}}{{ site.baseurl }}/images/churn/cm_optimal.jpeg" alt="">
 
