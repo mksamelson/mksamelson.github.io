@@ -138,7 +138,7 @@ Accuracy on the validation set 0.9065 - surprisingly nearly the same as on the t
 
 The confusion matrix displaying the distribution of true positive, true negative, false positive, and false negative predicted values on the validation set is as follows:
 
-<img src="{{site.url}}{{ site.baseurl }}/images/churn/cm_validation_acc.jpeg" alt="this is a placeholder image">  
+<img src="{{site.url}}{{ site.baseurl }}/images/churn/cm_max_acc.jpeg" alt="this is a placeholder image">  
 
 This may look great but it's not exactly what we want. Maximizing model accuracy unfortunately not satisfactorily address our business problem.  
 
@@ -168,13 +168,14 @@ The confusion matrices are below.
 
 Maximum Accuracy
 
-<img src="{{site.url}}{{ site.baseurl }}/images/churn/AccuracyPlot.jpeg" alt="Accuracy Plot">
+<img src="{{site.url}}{{ site.baseurl }}/images/churn/cm_max_acc.jpeg" alt="Accuracy Plot">
 
 Optimal Accuracy
 
-<img src="{{site.url}}{{ site.baseurl }}/images/churn/cmmaxaccuracy.jpeg" alt="Accuracy Plot">
+<img src="{{site.url}}{{ site.baseurl }}/images/churn/cm_opt_acc.jpeg" alt="">
 
-<img src="{{site.url}}{{ site.baseurl }}/images/churn/cm_optimal.jpeg" alt="">
+<img src="{{site.url}}{{ site.baseurl }}/images/churn/AccuracyPlot.jpeg" alt="Accuracy Plot">
+
 
 ## Other Considerations
 
