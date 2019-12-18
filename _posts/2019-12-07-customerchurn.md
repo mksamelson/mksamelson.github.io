@@ -140,6 +140,18 @@ The confusion matrix displaying the distribution of true positive, true negative
 
 <img src="{{site.url}}{{ site.baseurl }}/images/churn/cm_validation_acc.jpeg" alt="this is a placeholder image">  
 
+This may look great but it's not exactly what we want. Maximizing model accuracy unfortunately not satisfactorily address our business problem.  
+
+Maximum accuracy will produce a model that attempts to maximize *combined* accuracy for true positives and true negatives.  
+
+We are more interested in *maximizing true positives and accepting a larger number of false positives*.  Why?  To take corrective action, the business must reach out to customers *before* they drop the service.  Accordingly, the objective is to identify the most properly identified customers (true postives) recogizing that to boost this number we will also falsely identify some customers as intending to drop that won't (false positives).  And that's ok.  Reaching out to the "wrong" customers can also have favorable benefits.  But we don't want the imbalance between true positives and false positives to be extreme.  This requires a judgment call.
+
+So how do we find the "right" combination of true positives and false positives?
+
+
+
+
+The In attempting to maximize accuracy the model tends to correctly classify negatives in which we are not interested.    
 
 
 The best model had an AUC of approximately 0.92 for the training data and 0.91 against validation data.
@@ -150,7 +162,6 @@ However, AUC alone does not help address our optimal solution for the business p
 
 I need to find the confusion matrix associated with a point the ROC curve that gives us a "good balance" of true positives and false positives.  
 
-Maximizing *overall* model accuracy is unfortunately not the answer.  A threshold value that provides overall classification accuracy will attempt to maximize *combined* true positives and true negatives.  The data is highly skewed in that the number of customers that drop the service is small in comparison to those that don't.  In attempting to maximize accuracy the model tends to correctly classify negatives in which we are not interested.    
 
 The maximum accuracy the model achieves is approximately 91% at a threshold of .481.
 
