@@ -106,11 +106,11 @@ I examined feature distributions individually to identify outliers and find erro
 
 The figures below demonstrate the process through which I generated histograms, reviewed, and modified the data.
 
-<img src="{{site.url}}{{ site.baseurl }}/images/user_spendings_pre.jpeg" alt="this is a placeholder image">  
+<img src="{{site.url}}{{ site.baseurl }}/images/churn/user_spendings_pre.jpeg" alt="this is a placeholder image">  
 
 <script src="https://gist.github.com/mksamelson/ccca5078c2a4f455bfda1ad9e721f681.js"></script>
 
-<img src="{{site.url}}{{ site.baseurl }}/images/user_spendings_post.jpeg" alt="this is a placeholder image">  
+<img src="{{site.url}}{{ site.baseurl }}/images/churn/user_spendings_post.jpeg" alt="this is a placeholder image">  
 
 ## Model
 
