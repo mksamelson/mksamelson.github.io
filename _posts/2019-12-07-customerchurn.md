@@ -190,4 +190,4 @@ If I were using a model more sensitive to transformations I would have performed
 
 * Log Transformation.  Nearly all continuous data features show an exponential distribution.  High bias / low variance models such as regression perform better when input data is in the form of a Gaussian (normal) distribution.  Exponential distributions can be changed to normal distributions but apply a log() function.
 
-Full code can be found in my Github repository [here](https://github.com/mksamelson/Telecom_Customer_Churn).
+Full code can be found in my Github repository [here](https://github.com/mksamelson/customer_churn).
