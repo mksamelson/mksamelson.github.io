@@ -1,5 +1,5 @@
 ---
-title: "Resume"
+#title: "Resume"
 permalink: /cv/
 header:
   #image: "/images/bio_image.jpeg"
