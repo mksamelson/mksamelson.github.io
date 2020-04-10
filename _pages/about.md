@@ -6,8 +6,10 @@ header:
 
 ---
 
-I'm a data scientist and quantitative analyst with a capital markets background.
+I'm a senior data scientist and quantitative analyst with a capital markets background.
 
-I love team leadership, problem solving, and getting my hands dirty analyzing data. Passionate about "hands-on" problem solving using statistical analysis, predictive analytics, and visualization.
+I love problem solving, team leadership and getting my hands dirty analyzing data. I'm passionate about "hands-on" problem solving using statistical analysis, predictive analytics, and visualization.
 
-I have deep domain knowledge in banking, brokerage, and asset management and interests in other industries. Trained as an MBA, I see issues in business context and bring analytic solutions to gain insight and meet challenges.  
+I have deep domain knowledge in investment management, banking, brokerage with interests in performance improvement in other industries.
+
+Trained as an MBA, I see issues in business context and bring analytic solutions to gain insight and meet challenges.  
