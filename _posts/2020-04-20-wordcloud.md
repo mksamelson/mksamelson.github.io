@@ -1,7 +1,7 @@
 ---
 title:  "Political Insight through Speech (Non-Technical)"
-date: 2020-04-22
-tags: [Data Science]
+date: 2020-04-20
+tags: [NLP] 
 excerpt:  #"Political Insight through Speech"
 ---
 
