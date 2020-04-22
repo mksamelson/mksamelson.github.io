@@ -1,8 +1,9 @@
 ---
-title:  "Political Insight through Speech (Non-Technical)"
+title:  "Insight through Words:  Political Messaging"
 date: 2020-04-20
 tags: [NLP]
-excerpt:  #"Political Insight through Speech"
+excerpt:  #"Politicians' most used words can elicit themes without listening
+to an entire press conference."
 ---
 
 Hear a speech.  Watch a press conference.
@@ -67,4 +68,4 @@ leaves many views scratching their heads saying "what did he just say?"
 
 Governor Cuomo, like President Trump, conducts daily Corona Virus updates.  Media reports suggest that the Governor enjoys considerable viewer confidence during this national emergency.  
 
-The Governor spends the bulk of his briefing discussing 
+The Governor spends the bulk of his briefing discussing
