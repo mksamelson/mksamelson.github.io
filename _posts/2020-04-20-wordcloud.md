@@ -1,7 +1,7 @@
 ---
 title:  "Political Insight through Speech (Non-Technical)"
 date: 2020-04-20
-tags: [NLP] 
+tags: [NLP]
 excerpt:  #"Political Insight through Speech"
 ---
 
@@ -45,6 +45,7 @@ snapshot of speaker message.
 
 ### President Donald Trump ###
 
+
 <img src="{{site.url}}{{ site.baseurl }}/images/wordcloud/TrumpWords420.png" alt="">
 
 A look at the word cloud from President Trump's April 20th Corona Virus update
@@ -54,3 +55,16 @@ Having watched this briefing live as well as several others, Trump's messaging
 has been largely that of a cheerleader.  Things and people are "great".  To
 convey this message many adverbs are used ("really").  Auxiliary verbs such
 ("would") are also employed that express desire and wish.  
+
+Note the virtual cornucopia of mixed ambiguous words: "look, great, say,
+thing, people".  Not much there.  It matches his stream of speech that
+leaves many views scratching their heads saying "what did he just say?"
+
+### New York Governor Andrew Cuomo ###
+
+
+<img src="{{site.url}}{{ site.baseurl }}/images/wordcloud/CuomoWords420.png" alt="">
+
+Governor Cuomo, like President Trump, conducts daily Corona Virus updates.  Media reports suggest that the Governor enjoys considerable viewer confidence during this national emergency.  
+
+The Governor spends the bulk of his briefing discussing 
