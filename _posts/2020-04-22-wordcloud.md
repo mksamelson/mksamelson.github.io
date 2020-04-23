@@ -79,4 +79,13 @@ Sure enough, the word cloud for Governor Cuomo's April 20th corona virus update
 far and away emphasizes "test" and "people" in terms of usage. "State" and
 "government" are also repetitively used to a lesser but notable extent.
 
-###   
+### Georgia Governor Brian Kemp ###
+
+<img src="{{site.url}}{{ site.baseurl }}/images/wordcloud/Kemp2Words420.png" alt="">
+
+Georgia Governor Brian Kemp, at the time of this writing, has decided to begin
+reopening the selected businesses in the state of Georgia.  This has received
+considerable pushback from medical professionals and even President Trump (who, curiously,
+was all for re-opening the economy the prior week.)
+
+Notably, the Kemp word cloud has several words which capture the tone of his briefing.
