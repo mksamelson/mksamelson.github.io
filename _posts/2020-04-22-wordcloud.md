@@ -2,7 +2,7 @@
 title:  "Insight through Words:  Political Messaging"
 date: 2020-04-20
 tags: [Data Science]
-excerpt:  #"Word usage can elicit themes without listening to an entire transcript."
+excerpt:  "Word use can highlight conversation themes."
 ---
 
 Hear a speech.  Watch a press conference.
