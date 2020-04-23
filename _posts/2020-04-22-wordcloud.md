@@ -1,9 +1,8 @@
 ---
 title:  "Insight through Words:  Political Messaging"
 date: 2020-04-20
-tags: [NLP]
-excerpt:  #"Politicians' most used words can elicit themes without listening
-to an entire press conference."
+tags: [Data Science]
+excerpt:  #"Word usage can elicit themes without listening to an entire transcript."
 ---
 
 Hear a speech.  Watch a press conference.
