@@ -47,7 +47,7 @@ snapshot of speaker message.
 ### President Donald Trump ###
 
 
-<img src="{{site.url}}{{ site.baseurl }}/images/wordcloud/TrumpWords420.png" alt="">
+<img src="{{site.url}}{{ site.baseurl }}/images/wordcloud/Trump2Words420.png" alt="">
 
 A look at the word cloud from President Trump's April 20th Corona Virus update
 distinctly shows - a word salad.
@@ -64,8 +64,20 @@ leaves many views scratching their heads saying "what did he just say?"
 ### New York Governor Andrew Cuomo ###
 
 
-<img src="{{site.url}}{{ site.baseurl }}/images/wordcloud/CuomoWords420.png" alt="">
+<img src="{{site.url}}{{ site.baseurl }}/images/wordcloud/Cuomo2Words420.png" alt="">
 
 Governor Cuomo, like President Trump, conducts daily Corona Virus updates.  Media reports suggest that the Governor enjoys considerable viewer confidence during this national emergency.  
 
-The Governor spends the bulk of his briefing discussing
+The Governor spends the bulk of his briefing granularly discussing New York
+State's efforts to combat the virus.   Subject matter - broadly speaking from
+having watched his briefings - falls into three categories:
+
+* The need to test for the Virus
+* Challenges in getting Federal Government assistance to effectively combat the virus.
+* Exploring citizens to heed state and local government social guidance.
+
+Sure enough, the word cloud for Governor Cuomo's April 20th corona virus update
+far and away emphasizes "test" and "people" in terms of usage. "State" and
+"government" are also repetitively used to a lesser but notable extent.
+
+###   
