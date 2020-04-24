@@ -88,4 +88,10 @@ reopening the selected businesses in the state of Georgia.  This has received
 considerable pushback from medical professionals and even President Trump (who, curiously,
 was all for re-opening the economy the prior week.)
 
-Notably, the Kemp word cloud has several words which capture the tone of his briefing.
+Notably, the Kemp word cloud has several words which capture the tone of his briefing:  
+The "state", "work", "people", "Georgia", "health".
+
+However, the word cloud *misses* the suscint announcement that Georgia will allow
+the selective opening of designated business - clearly the central point of this
+particular update.  This highlights the way frequency word clouds can and can't be
+used.
