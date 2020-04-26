@@ -103,7 +103,25 @@ important points or speech details that are expressed one time and not repeated.
 
 <img src="{{site.url}}{{ site.baseurl }}/images/wordcloud/Fauci2Words417.png" alt="">
 
+What are medical experts saying?  Let's have a look at the word cloud for Dr. Anthony
+Fauci at the April 17th COVID briefing.  
+
+Arguably, Fauci is the foremost medical authority on public health at the national
+level.  He has played the role at the intersection of medicine, public health,
+COVID response policy, and politics.  Polls have indicated he is the "most trusted"
+person in regard to COVID-19.
+
+Though somewhat of an important but "bit player" in the COVID briefings (top billing
+goes to President Trump and Vice President Pence), he has been looked upon largely
+as the go-to person for the fact-driven policy advice.
+
+The word cloud clearly highlights where he believes the importance lies.  having
+viewed the actual press conference and transcript, Dr. Fauci is very vocal about
+the explicit importance of testing.  "Test" is far and away Dr. Fauci's most frequent
+word, with words like "need, infect, people, and know" playing supporting roles.
 
 ### Vice President Pence ###
 
 <img src="{{site.url}}{{ site.baseurl }}/images/wordcloud/Pence2Words417.png" alt="">
+
+Vice President Mike Pence plays an interesting role in the 
