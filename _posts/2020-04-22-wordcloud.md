@@ -12,7 +12,7 @@ What is that politician saying?
 The era of isolation and COVID-19 provides a fascinating
 environment for a bit of research.
 
-# Word Clouds #
+## Word Clouds ##
 
 Word clouds can provide interesting and fun insight intention
 what a politician is saying.  These are quite effective
