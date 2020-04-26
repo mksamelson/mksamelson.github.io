@@ -98,3 +98,12 @@ particular update.
 This is where the word cloud falls short.  It doesn't *fail* - but it falls short.  
 This example highlights that word clouds and word use frequency will not detect
 important points or speech details that are expressed one time and not repeated.
+
+### Dr. Anthony Fauci ###
+
+<img src="{{site.url}}{{ site.baseurl }}/images/wordcloud/Fauci2Words417.png" alt="">
+
+
+### Vice President Pence ###
+
+<img src="{{site.url}}{{ site.baseurl }}/images/wordcloud/Pence2Words417.png" alt="">
