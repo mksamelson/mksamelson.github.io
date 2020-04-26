@@ -89,9 +89,12 @@ considerable pushback from medical professionals and even President Trump (who, 
 was all for re-opening the economy the prior week.)
 
 Notably, the Kemp word cloud has several words which capture the tone of his briefing:  
-The "state", "work", "people", "Georgia", "health".
+The "state", "work", "people", "Georgia", "health".  Sets the tone - doesn't it?
 
-However, the word cloud *misses* the suscint announcement that Georgia will allow
+However, the word cloud *misses* the succinct announcement that Georgia will allow
 the selective opening of designated business - clearly the central point of this
-particular update.  This highlights the way frequency word clouds can and can't be
-used.
+particular update.  
+
+This is where the word cloud falls short.  It doesn't *fail* - but it falls short.  
+This example highlights that word clouds and word use frequency will not detect
+important points or speech details that are expressed one time and not repeated.
