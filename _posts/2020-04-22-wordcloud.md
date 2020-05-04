@@ -124,4 +124,13 @@ word, with words like "need, infect, people, and know" playing supporting roles.
 
 <img src="{{site.url}}{{ site.baseurl }}/images/wordcloud/Pence2Words417.png" alt="">
 
-Vice President Mike Pence plays an interesting role in the 
+Vice President Mike Pence plays an interesting role in the in the COVID pandemic response.
+He is head of the response task force yet also a politician.  
+
+Therefore, one would think his presentations span the range from meaningful response policy to outright crazy politicized responses.  And listening to his presentations they are generally just that.
+
+Interestingly, three words jump of the page - "state", "test", and "president".  A review of Pence's transcripts more deeply reveal references to the amount of testing being conducted, the responsibilities of states in managing their virus responses, and the obvious praise of the president for his leadership, guidance, etc.
+
+## Conclusion ##
+
+Word clouds and word frequency are interesting tools that can be used extract themes from extended presentations and speeches.  Under the assumption that *word use frequency correlates with intended message*, word clouds can be an effective short cut to full transcript digestion in ascertaining speaker message.
