@@ -14,7 +14,7 @@ The code used to generate word clouds employs basic webscraping and NLP techniqu
 
 Political press conference transcripts are readily available on the web with minimal google searching.  
 
-Rev.com (https://www.rev.com) hosts a large number of press conference transcriptions.
+[Rev.com](https://www.rev.com) hosts a large number of press conference transcriptions.
 
 Once a particular individual and press conference is identified, the process of acquiring the content is straightforward.  The site address and individual's name are fed into the scraper and the code extracts the content associated with that individual for further processing.
 
