@@ -1,5 +1,5 @@
 ---
-title:  "Insight through Words:  Political Messaging" - Part II
+title:  "Insight through Words:  Political Messaging - Part II"
 date: 2020-04-28
 tags: [Data Science]
 excerpt:  "This post highlights the code used to generate the word clouds and insights in Part I."
@@ -20,7 +20,7 @@ Once a particular individual and press conference is identified, the process of 
 
 Scraping is easily accomplished using the Selenium, BeautifulSoup, and regular expression Python packages.
 
-```Python
+```python
 
 from selenium import webdriver
 from bs4 import BeautifulSoup
@@ -86,7 +86,7 @@ master_string = re.sub(pattern, '', master_string)
 
 Removing contractions is easy - if a list of them is handy.  We reference a list of contractions and their corresponding uncontracted form in a dictionary:
 
-```Python
+```python
 
 CONTRACTION_MAP = {
 "ain't": "is not",
