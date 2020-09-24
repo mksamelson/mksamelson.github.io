@@ -2,7 +2,7 @@
 title:  "Insight through Words:  Political Messaging - Part II"
 date: 2020-04-28
 tags: [Data Science]
-excerpt:  "This post highlights the code used to generate the word clouds and insights in Part I."
+excerpt:  "The code used to generate the word clouds and insights in Part I."
 ---
 This post highlights the code used to generate the word clouds and insights in Part I.  If you haven't read Part I, click [here](https://mksamelson.github.io/wordcloud/).
 
