@@ -11,4 +11,4 @@ Notebook is an illustration of using data pipelines in the preparation process. 
 
 Of interest - it is notable how model performance can vary based on a data set and whether numeric data is scaled / standardized.
 
-Full code can be found in my Github repository [here](https://github.com/mksamelson/abelone)
+Full code can be found in my Github repository [here](https://github.com/mksamelson/abalone)
